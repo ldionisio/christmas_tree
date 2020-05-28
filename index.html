@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Árbol de Navidad</title>    
+    <meta charset="UTF-8"> 
+	
+	<!-- Agregamos el link para indicar dónde está la hoja de estilos css -->
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	
+	<!-- Enlazamos dos src de jquery, el segundo, porque una animación (shake) no me deja realizarla si no es con JQuery UI -->
+	<script src="jquery-3.4.1.min.js" type="text/javascript"></script>  
+	<!-- Este seria en el enlace si no lo hubiésemos descargado -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<!-- jquery ui -->
+	<link rel="stylesheet" href="jquery-ui.css"><script src="jquery-ui.js"></script>
+	<!-- Este seria en el enlace si no lo hubiésemos descargado -->
+	<!-- <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script> -->
+
+  </head> 
+  
+  <!-- Ponemos un color de fondo al body, para distinguir dónde termina los márgenes de la imágen -->
+  <body style= 'background-color: white'> 
+	<!-- Empezamos un div que englobará todos nuestros elementos -->
+	<div class= "container" id="container">
+		<!-- Y un div para los botones y los títulos -->
+		<div class= "botones">
+			<!-- Los botones tendrán la función respectiva para poder incrementar o eliminar bolas -->
+			<button id='boton1' onclick="incrementValue()">Poner Bola</button>
+			<button id='boton2' onclick="moverArbol()">Mover Árbol</button>
+	
+			<div id="titulo">
+				<label>Bolas Creadas:</label>
+				<label id="cont_crear" >0</label> <br>
+				<label>Bolas Eliminadas:</label>
+				<label id="cont_elim">0</label>
+			</div>
+		</div>
+		<!-- Añadimos la imagen del arbol -->
+		<div id="imagen">
+		<!-- Aquí irán las imágenes creadas de las bolas -->
+		</div>
+	
+	</div>
+	<!-- También añadimos el src en dónde guardaremos las animaciones -->
+    <script src="animaciones.js"></script> 
+  </body>  
+</html>
